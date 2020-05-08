@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author prakhar patidar
+ */
+public class TwoSum {
+    
+    public static int[] twoSum(int[] nums, int target)
+    {
+        int arr[]=new int[2];
+        
+        for(int i=0;i<nums.length;i++)
+        {
+            for (int j = i+1; j < nums.length; j++)
+            {
+                int sum=nums[i]+nums[j];
+                    if(sum==target)
+                    {
+                        arr[0]=i;
+                        arr[1]=j;
+                    }
+            }
+            
+        
+        }
+        return arr;
+    }
+    
+    
+    public static void main(String[] args) {
+        int arr[]=new int[2];
+        int nums[]={2,7,11,15};
+        int target=22;
+        arr=twoSum(nums,target);
+        for(int e:arr){
+            System.out.println(e);}
+    }
+    
+}
+
+
+    
+
