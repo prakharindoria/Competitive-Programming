@@ -28,6 +28,7 @@
 //
 //2 <= nums.length <= 500
 //0 <= nums[i] <= 100
+
 public class NumbersSmallerThenCurrentNumber {
    
     public static void main(String[] args) {
@@ -40,7 +41,7 @@ public class NumbersSmallerThenCurrentNumber {
     }
    
     public static int[] smallerNumbersThanCurrent(int[] nums) {
-        int count[]=new int[nums.length];
+        int countArr[]=new int[nums.length];
         int c=0;
         for(int i=0;i<nums.length;i++)
         {    c=0;
@@ -49,15 +50,11 @@ public class NumbersSmallerThenCurrentNumber {
                 if(nums[i]>nums[j])
                     c++;     
             }
-         count[i]=c;
+         countArr[i]=c;
             
             
         }
-        
-        
-        
-        
-        return count;
+         return count;
         
     }
 }

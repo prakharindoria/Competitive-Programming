@@ -46,4 +46,5 @@ public class PlayingWithDigits {
         return product-sum;  
     }
 }
-
+// Runtime: 0 ms, faster than 100.00% of Java online submissions for Subtract the Product and Sum of Digits of an Integer.
+// Memory Usage: 36.4 MB, less than 100.00% of Java online submissions for Subtract the Product and Sum of Digits of an Integer.
