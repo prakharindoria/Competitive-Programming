@@ -46,37 +46,30 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        
         Scanner kb=new Scanner(System.in);
         List<String> al=new ArrayList<>();
-        int n=kb.nextInt();
-        kb.nextLine();
-        int q=0;
-        while(q<n)
-        {
+        int n=kb.nextInt();kb.nextLine();
+
+        for(int i=0;i<n;i++)
         al.add(kb.nextLine());
-        q++;
-        }
-        int j=0;
         
-        while(j<n)
-        {String even="",odd="";
-        char [] arr=al.get(j).toCharArray();
-            for(int i=0;i<arr.length;i++)
+        char [] arr;
+        for(int i=0;i<n;i++)
+        {
+            String even="",odd="";
+            arr=al.get(i).toCharArray();
+            for(int j=0;j<arr.length;j++)
             {
-                if(i%2==0)
-                   even=even+arr[i];
+                if(j%2==0)
+                   even=even+arr[j];
                 else
-                   odd=odd+arr[i];
-
-
-
+                   odd=odd+arr[j];
             }
             System.out.println(even+" "+odd);
-
-                j++;
+                
         }
+    }
+}
 
 
 
