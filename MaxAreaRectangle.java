@@ -1,0 +1,31 @@
+/*
+Maximum Area Rectangle 
+Given length L and breadth B of N rectangles. The task is to return maximum area of the rectangle.
+
+Input:
+First line of input contains number of testcases T. For each testcase, there will be two lines, first of which contains N, number of rectangle, next line contains length and breadth of N rectangles.
+
+Output:
+For each testcase, output maximum area of rectangle.
+
+User Task: Your task is to complete the function calculate_Area() which returns maximum area. Use area() function in Rectangle class.
+
+Constraints:
+1 <= T <= 10
+1 <= N <= 103
+1 <= L, B <= 104
+1 <= Area <= 108
+
+Example :
+Input:
+1
+3
+1 2 3 4 5 6
+
+Output:
+30
+
+Explanation:
+Testcase 1: Area of rectangle with length 5 and breadth 6 is maximum, and is equal to 30.
+*/
+
