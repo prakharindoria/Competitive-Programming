@@ -23,3 +23,19 @@ Output: False
 
 Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
 */
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        boolean res=true;
+            int len=word.length();int count=0;
+            for(int i=1;i<len;i++){
+                if(word.charAt(i)>=65 && word.charAt(i)<=90)
+                {res=false;count++;}     
+            }
+        if(count==len-1 && word.charAt(0)>=65 && word.charAt(0)<=90)
+            res=true;
+                   return res;
+            
+            
+            
+    }
+}
