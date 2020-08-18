@@ -26,3 +26,51 @@ Expected Auxiliary Space: O(1)
 Constraints:
 1 <= n <= 10000
 */
+// { Driver Code Starts
+import java.util.Scanner;
+import java.lang.Math;
+
+class Convert_To_Five {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T > 0) {
+            int N = sc.nextInt();
+            System.out.println(new GfG().convertfive(N));
+            T--;
+        }
+    }
+}// } Driver Code Ends
+
+
+class GfG {
+    int convertfive(int num) {
+        // Your code here
+        int res=0;
+        int nod=0;
+        int cnum=num;
+        while(cnum>0){
+            cnum=cnum/10;
+            nod++;
+        }
+        int arr[]=new int[nod];
+        for(int i=0;i<nod;i++){
+        int ld=num%10;
+        if(ld==0)
+        ld=5;
+        arr[i]=ld;
+        num=num/10;
+            
+        }
+        
+        String s="";
+        for(int i=nod-1;i>=0;i--)
+        s=s+arr[i];
+        res=Integer.parseInt(s);
+        
+        
+        
+        
+        return res;
+    }
+}
