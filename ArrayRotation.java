@@ -66,11 +66,17 @@ public class Solution {
         }
         
         return res;
-
-
-
-
     }
+    /*
+    //Better Approach
+     public static int[] rotateArray(int[] arr, int d){
+        int n = arr.length;
+        int[] rotated = new int[n]; 
+        System.arraycopy(arr, d, rotated, 0, n - d);
+        System.arraycopy(arr, 0, rotated, n - d, d);
+        return rotated;
+    }
+    */
 
     private static final Scanner scanner = new Scanner(System.in);
 
