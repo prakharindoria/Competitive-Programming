@@ -140,19 +140,19 @@ public class A {
                     odc++;
                 }
             if(i%2==0)
-            {if(edc>=3)
+            {
+             if(edc>=3)
                 count=count+2;
-            else if(edc==2)
+             else if(edc==2)
                 count++;
+            }
             else
-                continue;}
-            else
-                {if(odc>=3)
-                count=count+2;
-            else if(odc==2)
-                count++;
-            else
-                continue;}
+                {
+                 if(odc>=3)
+                    count=count+2;
+                 else if(odc==2)
+                     count++;
+            }
             
             
             
