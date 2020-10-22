@@ -14,6 +14,7 @@ public class HelloWorld{
             al.add(m);
             n=n/2;
         }
+             //From Reverse Order we print  
         for(int j=al.size()-1;j>=0;j--){
             System.out.print(al.get(j));
         }}
