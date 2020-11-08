@@ -27,3 +27,43 @@ Sample Output
 9
 
 */
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner kb=new Scanner(System.in);
+        int noe=kb.nextInt();
+        int arr[]=new int[noe];
+        int i=0;
+        while(noe-->0){
+            arr[i]=kb.nextInt();
+            i++;   
+        }
+        
+        
+        int count=0;
+        for(int j=0;j<arr.length;j++){
+            int sum=0;
+            for(int k=j;k<arr.length;k++)
+            {
+                sum+=arr[k];
+                if(sum<0)count++;
+                
+            }
+            
+            
+            
+        }
+        
+        System.out.println(count);
+        
+        
+    }
+}
