@@ -5,20 +5,17 @@ Binary to Decimal
 public class Main
 {
 	public static void main(String[] args) {
-		int bin=111;//Binary Number 
-		int nod=0;
-		int cbin=bin;
+		int res,nod,cbin,bin=1011;
+		cbin=bin;
 		while(cbin>0){
-		    nod=nod+1;
-		    cbin=cbin/10;
+		    nod+=1;
+		    cbin/=10;
 		}
-		
-		int res=0;
-		
+		res=0;
 		for(int i=0;i<=nod;i++){
-		   int temp=bin%10;
+		    int temp=bin%10;
 		    res+=(Math.pow(2,i)*temp);
-		    bin=bin/10;
+		    bin/=10;
 		}
 		System.out.println(res);
 	}
