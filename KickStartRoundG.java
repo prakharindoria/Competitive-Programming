@@ -69,7 +69,7 @@ class Solution {
                 for (int j = i; j < cs.length();) {
                     
                     ios = cs.indexOf("START", j);
-                    if (ios >=0) {
+                    if (ios >=iok) {
                         count++;
                         j =ios+5;
                     }
