@@ -34,3 +34,30 @@ Sample Output
 
 4 3 2 1 
 */
+void reverse()
+
+    {
+
+        Node temp = null;
+
+        Node cur = head;
+
+        while (cur != null) {
+
+            temp = cur.prev;
+
+            cur.prev = cur.next;
+
+            cur.next = temp;
+
+            cur = cur.prev;
+
+        }
+
+        if (temp != null) {
+
+            head = temp.prev;
+
+        }
+
+    }
