@@ -26,3 +26,17 @@ Constraints:
 nums.length == 2n
 1 <= nums[i] <= 10^3
 */
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int []arr=new int[nums.length];
+        for(int i=0,j=0;i<nums.length;i++){
+            if(i%2==0)
+                {arr[i]=nums[j];j++;}
+            else
+                {arr[i]=nums[n];n++;} 
+        }//for close
+    return arr;    
+    }//shuffle close
+    
+    
+}//class close
