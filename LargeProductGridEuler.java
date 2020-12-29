@@ -28,12 +28,11 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 
 
 */
-
-
 import java.util.Scanner;
 
 public class LargeProduct {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         int [][]arr=new int[20][20];
         String s="08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n" +
                 "49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n" +
@@ -69,23 +68,21 @@ public class LargeProduct {
 
         int maxLR=proLR(arr);
         int maxUD=proUD(arr);
-        int maxD=proD(arr);
-        System.out.println(maxLR+" "+maxUD+" "+maxD+" ");
-        int max=Math.max(maxD, Math.max(maxUD, maxLR));
+        int maxDLR=proDLR(arr);
+        int maxDRL=proDRL(arr);
+
+        System.out.println(maxLR+" "+maxUD+" "+maxDLR+" "+maxDRL);
+        int max=Math.max(Math.max(maxDLR, maxDRL), Math.max(maxUD, maxLR));
         System.out.println(max);
-
-
-
-
-
-
-
     }
 
-    public static int proLR(int [][]arr){
+    public static int proLR(int [][]arr)
+    {
         int max=0;
-        for (int i = 0; i < 20; i++) {
-            for (int j = 0; j <= 20-4; j++) {
+        for (int i = 0; i < 20; i++)
+        {
+            for (int j = 0; j <= 20-4; j++) 
+            {
                 int temp=arr[i][j]*arr[i][j+1]*arr[i][j+2]*arr[i][j+3];
                 if(temp>max)max=temp;
             }
@@ -94,10 +91,13 @@ public class LargeProduct {
     }
 
 
-    public static int proUD(int [][]arr){
+    public static int proUD(int [][]arr)
+    {
         int max=0;
-        for (int i = 0; i <= 20-4; i++) {
-            for (int j = 0; j < 20; j++) {
+        for (int i = 0; i <= 20-4; i++) 
+        {
+            for (int j = 0; j < 20; j++) 
+            {
                 int temp=arr[i][j]*arr[i+1][j]*arr[i+2][j]*arr[i+3][j];
                 if(temp>max)max=temp;
             }
@@ -106,10 +106,13 @@ public class LargeProduct {
     }
 
 
-    public static int proD(int [][]arr){
+    public static int proDLR(int [][]arr)
+    {
         int max=0;
-        for (int i = 0; i <= 20-4; i++) {
-            for (int j = 0; j <= 20-4; j++) {
+        for (int i = 0; i <= 20-4; i++) 
+        {
+            for (int j = 0; j <= 20-4; j++) 
+            {
                 int temp=arr[i][j]*arr[i+1][j+1]*arr[i+2][j+2]*arr[i+3][j+3];
                 if(temp>max)max=temp;
             }
@@ -117,7 +120,17 @@ public class LargeProduct {
         return max;
     }
 
-
-
-
+    public static int proDRL(int [][]arr)
+    {
+        int max=0;
+        for (int i = 3; i < 20; i++) 
+        {
+            for (int j = 0; j <= 20-4; j++) 
+            {
+                int temp=arr[i][j]*arr[i-1][j+1]*arr[i-2][j+2]*arr[i-3][j+3];
+                if(temp>max)max=temp;
+            }
+        }
+        return max;
+    }
 }
