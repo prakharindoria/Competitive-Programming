@@ -15,7 +15,7 @@ import java.util.Set;
 public class AmicableNumber {
     public static void main(String[] args) {
         int amisum=0;
-        for (int n = 1; n < 10000; n++)
+        for (int n = 1; n < 1000; n++)
         {
 
             int sumdiv=0;
