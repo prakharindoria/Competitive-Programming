@@ -15,16 +15,19 @@ import java.util.Set;
 public class AmicableNumber {
     public static void main(String[] args) {
         int amisum=0;
+        //Itrating till 1000
         for (int n = 1; n < 1000; n++)
         {
 
             int sumdiv=0;
+            //checking all divisors and adding them
             for (int j = 1; j < n; j++)
             {
                 if(n%j==0)sumdiv+=j;
             }
             int cn=sumdiv;
             int sumchk=0;
+            //checking the amicability of number
             for (int i = 1; i < cn; i++)
             {
                 if(cn%i==0)sumchk+=i;
