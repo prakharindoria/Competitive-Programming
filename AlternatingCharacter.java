@@ -58,10 +58,12 @@ public class Solution {
     // Complete the alternatingCharacters function below.
     static int alternatingCharacters(String s) {
         char arr[]=new char[s.length()];
+        //Convert string to character array
         for(int i=0;i<arr.length;i++){
             arr[i]=s.charAt(i);
         }
         int count=0;
+        //Check for alternating characters
         for(int i=0;i<arr.length-1;i++){
             if(arr[i]==arr[i+1])
             count++;
