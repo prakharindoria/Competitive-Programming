@@ -25,7 +25,7 @@ public class ConsecutivePrimeSum {
         }
         System.out.println(currentSum);
     }
-
+//Check Primality
     public static boolean isPrime(int n){
         for(int i = 2; i <= Math.sqrt(n); i++){
             if (n % i == 0 && n != i) {
