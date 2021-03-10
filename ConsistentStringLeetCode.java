@@ -50,3 +50,29 @@ class Solution {
         return res;
     }
 }
+
+
+//Bad Solution
+class Solution {
+    public int countConsistentStrings(String allowed, String[] words) {
+        int res=0;
+        char arr[]=allowed.toCharArray();
+        
+        for(int i=0;i<words.length;i++)
+        {
+            
+            String temp=words[i];
+            
+            for(int j=0;j<arr.length;j++)
+            {
+            temp=temp.replaceAll(String.valueOf(arr[j]),"");
+            }
+            if(temp.length()==0)res++;
+
+           
+        }
+
+        return res;
+    }
+}
+
