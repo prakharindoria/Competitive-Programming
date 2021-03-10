@@ -76,3 +76,35 @@ class Solution {
     }
 }
 
+//Even Bad Solution
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Solution {
+    public int countConsistentStrings(String allowed, String[] words) {
+        int res=0;
+        char arr[]=allowed.toCharArray();
+        
+        for(int i=0;i<words.length;i++)
+        {
+            
+            StringBuffer temp=
+                new StringBuffer(words[i]);
+            
+            for(int j=0;j<arr.length;j++)
+            {
+            temp=replaceAll(temp,String.valueOf(arr[j]),"");
+            }
+            if(temp.length()==0)res++;
+
+           
+        }
+
+        return res;
+    }
+    
+    public static StringBuffer replaceAll(StringBuffer sb, String find, String replace){
+        return new StringBuffer(Pattern.compile(find).matcher(sb).replaceAll(replace));
+    }
+    
+}
