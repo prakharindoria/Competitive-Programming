@@ -155,18 +155,11 @@ public class Solution {
      *
      */
     static void reversePrint(SinglyLinkedListNode head) {
-        SinglyLinkedListNode temp=head;
-        ArrayList<Integer> al=new ArrayList<>();
-        
-        while(temp!=null){
-            al.add(temp.data);
-            temp=temp.next;
-        }
-        for(int i=al.size()-1;i>=0;i--){
-            System.out.println(al.get(i));
-        }
-        
-
+        if(head==null)
+        return;
+        else 
+        reversePrint(head.next);
+        System.out.println(head.data);
 
     }
 
