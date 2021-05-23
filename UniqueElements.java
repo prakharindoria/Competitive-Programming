@@ -1,3 +1,7 @@
+
+/*
+Print all elements between given range that contains only unique digit elements.
+*/
 import java.util.Scanner;
 public class UniqueDigits {
     public static void main(String[] args) {
